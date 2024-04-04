@@ -10,9 +10,8 @@
     <li>React Hook Form</li>
     <li>JS</li>
   </ol>
-</blockquote>
 
-<p>Após clonar o projeto para sua maquina, basta ir no terminal e digirar: ` npm install i ` </p>
+<p>Após clonar o projeto para sua maquina, basta ir no terminal e digirar:  </p>  `npm install i`
 <p>pra que todas as dependencias do projeto seja instalada.</p>
 
 
