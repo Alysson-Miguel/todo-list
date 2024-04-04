@@ -12,6 +12,11 @@
   </ol>
 </blockquote>
 
+<p>Após clonar o projeto para sua maquina, basta ir no terminal e digirar: ` npm install i ` </p>
+<p>pra que todas as dependencias do projeto seja instalada.</p>
+
+
+
 <p>Os principais pontos do desafio foi, fazer o consumo da API.</p> 
 <p>Armazenar os dados no LocalStorage do navegador.</p>
 <p>Fazer ele usar a API com mudanças de frase a cada 5 segundos.</p>
