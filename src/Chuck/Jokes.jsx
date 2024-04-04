@@ -29,8 +29,8 @@ React.useEffect(() => {
 
   return (
     <div>
-      <br/>
       <p style={{fontWeight:300,marginTop:'16px'}}>"{data.value}"</p>
+      <div style={{marginBottom:'30px'}}>By Chuck Norris</div>
     </div>
   );
 };

@@ -5,11 +5,11 @@ import Container from 'react-bootstrap/Container';
 export default function FormsTasks() {
   const { register, handleSubmit, reset } = useForm();
   const [taskCount, setTaskCount] = useState(() => {
-    const storedTaskCount = JSON.parse(localStorage.getItem('taskCount')); // Cria uma chave e um valor para armazenar no localStorage
+    const storedTaskCount = JSON.parse(localStorage.getItem('taskCount')); // recuperando o valor armazenado na chave taskcount
     return storedTaskCount || 0;
   });
   const [tasks, setTasks] = useState(() => {
-    const storedTasks = JSON.parse(localStorage.getItem('tasks')); // Cria uma chave e um valor para armazenar no localStorage
+    const storedTasks = JSON.parse(localStorage.getItem('tasks')); // recuperando o valor armazenado na chave stodedTask
     return storedTasks || [];
   });
 
@@ -20,7 +20,7 @@ export default function FormsTasks() {
     }
   }, []);
 
-  useEffect(() => { // Armazena as duas chaves na LocalStorage
+  useEffect(() => { // Armazena as duas chaves na LocalStorage (Captura uma ARRY e Retorna uma String Obj)
     localStorage.setItem('tasks', JSON.stringify(tasks));
     localStorage.setItem('taskCount', JSON.stringify(taskCount));
   }, [tasks, taskCount]);
