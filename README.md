@@ -10,9 +10,9 @@
     <li>React Hook Form</li>
     <li>JS</li>
   </ol>
-
+</blockquote>
 <p>Após clonar o projeto para sua maquina, basta ir no terminal e digitar:  </p>  
-<p>° npm install i</p>
+<p> ° npm install i  </p>
 <p>para que todas as dependências do projeto sejam instalados.</p>
 <p>Os principais pontos do desafio foi, fazer o consumo da API.</p> 
 <p>Armazenar os dados no LocalStorage do navegador.</p>
