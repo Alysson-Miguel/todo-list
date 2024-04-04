@@ -11,7 +11,8 @@
     <li>JS</li>
   </ol>
 
-<p>Após clonar o projeto para sua maquina, basta ir no terminal e digirar:  </p>  `npm install i`
+<p>Após clonar o projeto para sua maquina, basta ir no terminal e digirar:  </p>  
+<p>° npm install i</p>
 <p>pra que todas as dependencias do projeto seja instalada.</p>
 
 
