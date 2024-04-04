@@ -11,8 +11,10 @@
     <li>JS</li>
   </ol>
 </blockquote>
-
+<p>Após clonar o projeto para sua maquina, basta ir no terminal e digitar:  </p>  
+<p> ° npm install i  </p>
+<p>para que todas as dependências do projeto sejam instalados.</p>
 <p>Os principais pontos do desafio foi, fazer o consumo da API.</p> 
 <p>Armazenar os dados no LocalStorage do navegador.</p>
 <p>Fazer ele usar a API com mudanças de frase a cada 5 segundos.</p>
-<p>Usar o formulario pra enviar os dados pro localStorage.</p>
+<p>Usar o formulário pra enviar os dados pro localStorage.</p>
