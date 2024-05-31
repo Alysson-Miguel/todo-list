@@ -3,18 +3,7 @@ body{
     background-color: #333333;
     color: #ffffff;
     font-family: 'Poppins';
-    
     position: relative;
-
-
-}
-
-.Conteudo{
-    padding: 20px;
-    width: 60%;
-    position: relative;
-    left: 500px;
-    top:50px;
 }
 
 @media (max-width:768px){
@@ -83,13 +72,9 @@ ul{
 .section{
     background-Color: #403c3c;
     border-radius: 10px;
-    
-    padding: 8px;
-    height: 12vh;
+    padding: 16px;
     white-space: nowrap;
-    text-align: center;
-    
-    
+    text-align: center;    
 }
 
 
@@ -111,8 +96,6 @@ label {
     text-align: left;
     display: block;
     line-height: 0.5;
-
-
 }
 
 button[type="submit"],
