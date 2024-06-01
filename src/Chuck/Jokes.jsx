@@ -1,7 +1,5 @@
 import React from 'react';
 import { useQuery } from 'react-query';
-
-
 const ChuckNorrisJokes = () => {
   const { data, isLoading, isError, refetch,  } = useQuery('chuck-norris-joke', async () => {
     const response = await fetch('https://api.chucknorris.io/jokes/random');
@@ -29,8 +27,8 @@ React.useEffect(() => {
 
   return (
     <div>
-      <p style={{fontWeight:300,marginTop:'16px'}}>"{data.value}"</p>
-      <div style={{marginBottom:'30px'}}>By Chuck Norris</div>
+      <p style={{fontWeight:300 }}>"{data.value}"</p>
+      <div>By Chuck Norris</div>
     </div>
   );
 };
