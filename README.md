@@ -11,11 +11,10 @@
     <li>JS</li>
   </ol>
 </blockquote>
-<p>Digite: cd todo-list </p> <p>Para entrar na pasta do projeto</p>
-<p>Digite: npm install i </p>  <p>Para instalar todas as dependencias</p>
-<p>Digite: npm start </p> <p>Para iniciar a aplicação</p>
-<p>para que todas as dependências do projeto sejam instalados.</p>
+<p>Digite: cd todo-list (Para entrar na pasta do projeto) </p> 
+<p>Digite: npm install i (Para instalar todas as dependencias)</p>  
+<p>Digite: npm start (Para iniciar a aplicação)</p>
 <p>Os principais pontos do desafio foi, fazer o consumo da API.</p> 
 <p>Armazenar os dados no LocalStorage do navegador.</p>
-<p>Fazer ele usar a API com mudanças de frase a cada 5 segundos.</p>
+<p>Fazer ele dar Refetch na API com mudanças de frase a cada 5 segundos.</p>
 <p>Usar o formulário pra enviar os dados pro localStorage.</p>
