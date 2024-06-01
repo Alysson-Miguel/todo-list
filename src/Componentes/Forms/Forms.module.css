@@ -1,11 +1,55 @@
-img{
-   width: 20px;
-   position: absolute;
-   left: 200px;
- 
-   
+body{
+    display: flex;
+}
+@media only screen and (max-width: 768px){
+    body{
+        display: inline;
+    }
+    article{
+        overflow: auto;
+        max-height: 31vh;
+    }
 }
 
+img{
+    width: 20px;
+    float: right;    
+}
 li{
-    background-color: aqua;
+    background-color: rgba(87, 87, 87, 0.199);
+    border-radius: 8px;
+    margin: 8px;
+    padding: 8px;
+}
+
+li span{
+    text-align: right;
+    display: block;
+}
+
+article{
+    width: 100%;
+    overflow: auto;
+
+    
+}
+
+
+
+section{
+    background-color: rgba(87, 87, 87, 0.199);
+    border-radius: 8px;
+    margin: 8px;
+    padding: 8px;
+    text-align: center;
+
+
+}
+
+aside{
+    background-color: rgba(87, 87, 87, 0.199);
+    border-radius: 8px;
+    margin: 8px;
+    padding: 8px;
+
 }

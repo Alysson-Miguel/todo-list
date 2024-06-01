@@ -12,7 +12,7 @@ const App = () => {
   <QueryClientProvider client={queryClient}> 
   <Header/>
   <FormsTasks/>
-  <ChuckNorrisJokes/>
+  {/* <ChuckNorrisJokes/> */}
   <Footer/>
   </QueryClientProvider>
   </> 

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import SVG from './Vector.svg'
+import Container from 'react-bootstrap/Container'
 import './Forms.module.css'
 
 export default function FormsTasks() {
@@ -24,7 +25,7 @@ export default function FormsTasks() {
       id: Date.now(),
       title: data.title,
       description: data.description,
-      dateAdded: new Date().toLocaleString()
+      dateAdded: new Date().toLocaleDateString()
     };
     setTasks([...tasks, newTask]);  
     reset();
@@ -37,34 +38,47 @@ export default function FormsTasks() {
   };
 
   return (
-    <>
-        <h2>To do</h2>
-        <ul>
-          {tasks.map(task => (
-            <li key={task.id}>
-              <img src={SVG} alt="svg" className='svg' onClick={() => ApagarTask(task.id)}/>
-              <h3>{task.title}</h3>
-              <p>{task.description}</p>
-              <p>{task.dateAdded}</p>
-            </li>
-          ))}
-        </ul>
+<>
+<body>
+  
 
-          <section>
-          <h2>Finished tasks quantity</h2>
-          <div className='contador'>{taskCount}</div> 
-          </section>
+        
+  <article>
+  
+    <ul>
+      {tasks.map(task => (
+        <li key={task.id}>
+          <img src={SVG} alt="svg" className='svg' onClick={() => ApagarTask(task.id)}/>
+          <h3>{task.title}</h3>
+          <p>{task.description}</p>
+          <span>{task.dateAdded}</span>
+        </li>
+      ))}
+    </ul>
+  </article>
+
+      <Container>
+  <section>
+    <h2>Finished tasks quantity</h2>
+    <h1 className='contador'>{taskCount}</h1> 
+  </section>
+
+
 
         <aside>
           <h2>Add new to do</h2>
           <form onSubmit={handleSubmit(onSubmit)} className='form'>
               <label htmlFor="title">Task Name:</label>
               <input type="text" id="title" {...register("title")} placeholder='Title...' required/>
+              
               <label htmlFor="description">Task Description:</label>
               <input type="text" id="description" {...register("description")} placeholder='Description...' required />
             <button type="submit" className='ButtonCreate'>Create To do</button>
           </form>
         </aside>
-        </>
+        </Container>
+        </body>
+        
+        </> 
   );
 }
