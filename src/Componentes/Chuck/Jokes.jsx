@@ -1,5 +1,6 @@
 import React from 'react';
 import { useQuery } from 'react-query';
+import styles from './Jokes.module.css'
 
 
 const ChuckNorrisJokes = () => {
@@ -19,7 +20,7 @@ const ChuckNorrisJokes = () => {
   
 // Chama a função de refetch a cada 5 segundos
 React.useEffect(() => {
-  const intervalId = setInterval(refetchData, 5000);
+  const intervalId = setInterval(refetchData, 4000);
   return () => clearInterval(intervalId);
   // eslint-disable-next-line react-hooks/exhaustive-deps
 }, []);
@@ -28,10 +29,9 @@ React.useEffect(() => {
   if (isError) return <div>Ocorreu um erro!</div>;
 
   return (
-    <div>
-      <p style={{fontWeight:300,marginTop:'16px'}}>"{data.value}"</p>
-      <div style={{marginBottom:'30px'}}>By Chuck Norris</div>
-    </div>
+    <>
+      <p className={styles.jokes}>"{data.value}"</p>
+    </>
   );
 };
 

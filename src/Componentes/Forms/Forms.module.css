@@ -1,56 +1,63 @@
+body{
+    /* border: 3px solid blue; */
+    padding: 18px;
+}
+.Container{
+    /* border: 3px solid rgb(0, 255, 64); */
+    display: flex;
+    position: relative;
+}
+.items{
+    margin-left: 12px;
+    /* border: 3px solid red; */
+}
 section{
-    background-color: #403c3c ;
-    border-radius: 10px;
-    margin-right: 30px;
+    background-color: #403c3c;
+    border-radius: 12px;
     overflow: auto;
-    max-height: 60vh;
-    width: 50%;
+    max-height: 52vh;
+    width: 50%;   
 
 }
-
-img{
+.ButtonDelete{
     position: absolute;
     width: 24px;
     right: 0;
     top: -8px;
 }
-
-
 li{
     background-color: #484444;
-    list-style: none;
     margin: 12px 8px 12px 8px ;
     padding: 16px;
     border-radius: 18px;
+    list-style: none;
     position: relative;
 }
-
-span{
-    display: block;
-    text-align: right;
-}
-
-aside{
-    background-Color: #403c3c;
-    margin: 12px 8px 12px 8px;
-    padding: 12px 8px 12px 8px;
-    border-radius: 10px;
-    padding: 16px;
-    text-align: center;    
-}
-
-.Contador{
+.tituloTask{
     font-weight: 600;
 }
 
-article{
-    background-color: #403c3c;
-    border-radius: 18px;
-    width: auto;
-    margin: 12px 8px 12px 8px;
-    padding: 12px 8px 12px 8px;
+span{
+    text-align: right;
 }
-
+/* background-color: #403c3c; */
+.contador{
+    background-color: #403c3c;
+    border-radius: 12px;
+    text-align: center;
+    padding: 10px;
+}
+.newTask{
+    background-color: #403c3c;
+    border-radius: 12px;
+    margin-top: 12px;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
 input {
     border-radius: 10px;
@@ -59,15 +66,8 @@ input {
     font-size: 14px;
     background-color: #484444;
     display: block;
-    
 }
-
-h2{
-    text-align: center  ;
-}
-
-
-button[type="submit"]{
+.button[type="submit"]{
   background: #ffffff;
   color: black;
   border-radius: 5px;
@@ -75,7 +75,6 @@ button[type="submit"]{
   padding: 8px 16px;
   margin: 12px 8px 12px 8px;
 }
-
 ::-webkit-scrollbar{
-    width: 0.5px;
+    width: 0.2px;
 }

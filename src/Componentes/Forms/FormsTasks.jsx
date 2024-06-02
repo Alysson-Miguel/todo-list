@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import Container from 'react-bootstrap/Container';
 import SVG from './Vector.svg'
-import './Forms.module.css'
+import styles from './Forms.module.css'
 
 export default function FormsTasks() {
   const { register, handleSubmit, reset } = useForm();
@@ -38,14 +38,14 @@ export default function FormsTasks() {
   };
 
   return (
-    <Container style={{display:'flex'}}>
+    <Container className={styles.Container}>
     
-      <section >
+      <section className={styles.section} >
         <ul>
           {tasks.map(task => (
-            <li key={task.id}>
-              <img src={SVG} alt="svg" onClick={() => ApagarTask(task.id)} className='ButtonDelete' />
-              <h1>{task.title}</h1>
+            <li key={task.id} className={styles.li}>
+              <img src={SVG} alt="svg" onClick={() => ApagarTask(task.id)} className={styles.ButtonDelete} />
+              <h3 className={styles.tituloTask}>{task.title}</h3>
               <p>{task.description}</p>
               <span>{task.dateAdded}</span>
             </li>
@@ -53,21 +53,23 @@ export default function FormsTasks() {
         </ul>
       </section>
       
-      <Container >
-        <aside>
+      <Container className={styles.items} >
+        
+        <aside className={styles.contador}>
           <h2>Finished tasks quantity</h2>
-           <p style={{fontSize:'xx-large'}}>{taskCount}</p> 
+           <h2>{taskCount}</h2>           
         </aside>
-        <article>
-          <h2>Add new to do</h2>
-          <form onSubmit={handleSubmit(onSubmit)} >
+        <article className={styles.newTask}>
+          <h2 style={{textAlign: 'center'}}>Add new to do</h2>
+          <form onSubmit={handleSubmit(onSubmit)} className={styles.form} >
             
               <label htmlFor="title">Task Name:</label>
               <input type="text" id="title" {...register("title")} placeholder='Title...' required/>
+
               <label htmlFor="description">Task Description:</label>
               <input type="text" id="description" {...register("description")} placeholder='Description...' required />
           
-            <button type="submit" className='button'>Create To do</button>
+            <button type="submit" className={styles.button}>Create To do</button>
           </form>
         </article>
         </Container>

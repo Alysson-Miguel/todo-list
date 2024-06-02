@@ -8,4 +8,5 @@ body{
     background-color: #333333;
     color: #ffffff;
     font-family: 'Poppins';
+    /* overflow: hidden; */
 }
