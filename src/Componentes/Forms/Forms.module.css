@@ -1,0 +1,81 @@
+section{
+    background-color: #403c3c ;
+    border-radius: 10px;
+    margin-right: 30px;
+    overflow: auto;
+    max-height: 60vh;
+    width: 50%;
+
+}
+
+img{
+    position: absolute;
+    width: 24px;
+    right: 0;
+    top: -8px;
+}
+
+
+li{
+    background-color: #484444;
+    list-style: none;
+    margin: 12px 8px 12px 8px ;
+    padding: 16px;
+    border-radius: 18px;
+    position: relative;
+}
+
+span{
+    display: block;
+    text-align: right;
+}
+
+aside{
+    background-Color: #403c3c;
+    margin: 12px 8px 12px 8px;
+    padding: 12px 8px 12px 8px;
+    border-radius: 10px;
+    padding: 16px;
+    text-align: center;    
+}
+
+.Contador{
+    font-weight: 600;
+}
+
+article{
+    background-color: #403c3c;
+    border-radius: 18px;
+    width: auto;
+    margin: 12px 8px 12px 8px;
+    padding: 12px 8px 12px 8px;
+}
+
+
+input {
+    border-radius: 10px;
+    border: none;
+    padding: 10px 16px;
+    font-size: 14px;
+    background-color: #484444;
+    display: block;
+    
+}
+
+h2{
+    text-align: center  ;
+}
+
+
+button[type="submit"]{
+  background: #ffffff;
+  color: black;
+  border-radius: 5px;
+  border: 1px solid white;
+  padding: 8px 16px;
+  margin: 12px 8px 12px 8px;
+}
+
+::-webkit-scrollbar{
+    width: 0.5px;
+}
