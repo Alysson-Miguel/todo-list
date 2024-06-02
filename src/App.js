@@ -1,21 +1,24 @@
-import Header from "./Componentes/Header/Header";
-import FormsTasks from "./Componentes/Forms/FormsTasks";
+import Header from "./Componentes/Header";
+import FormsTasks from "./Componentes/FormsTasks";
 import { QueryClient, QueryClientProvider } from 'react-query';
-import ChuckNorrisJokes from "./Componentes/Chuck/Jokes";
-import Footer from "./Componentes/Footer/Footer";
+import ChuckNorrisJokes from "./Chuck/Jokes";
+import Footer from "./Componentes/Footer";
 import './App.css'
-
+import { Container } from "react-bootstrap";
 
 const App = () => {
   const queryClient = new QueryClient();
   return ( 
   <>
-  <QueryClientProvider client={queryClient}>  
+  <Container className="Conteudo">
+  <QueryClientProvider client={queryClient}>  {/* é preciso envolver toda minha aplicação com essa tag */}
   <Header/>
   <FormsTasks/>
-  {/* <ChuckNorrisJokes/> */}
-  <Footer/>
+  <ChuckNorrisJokes/>
   </QueryClientProvider>
+  <Footer/>
+  </Container>
+  
   </> 
   );
 }
