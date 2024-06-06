@@ -1,63 +1,22 @@
-import React, { useState, useEffect } from 'react';
-import { useForm } from 'react-hook-form';
-import Container from 'react-bootstrap/Container';
-import SVG from './Vector.svg'
+import React from 'react';
+import { useTaskForm } from '../Forms/Forms';
+import ToDo from './To do/ToDo';
 import styles from './Forms.module.css'
+import Container from 'react-bootstrap/Container';
+
 
 export default function FormsTasks() {
-  const { register, handleSubmit, reset } = useForm();
-  const [taskCount, setTaskCount] = useState(() => {
-    const storedTaskCount = JSON.parse(localStorage.getItem('taskCount'));
-    return storedTaskCount || 0;
-  });
-  const [tasks, setTasks] = useState(() => {
-    const storedTasks = JSON.parse(localStorage.getItem('tasks')); 
-    return storedTasks || [];
-  });
-  // Persiste do dados
-  useEffect(() => { 
-    localStorage.setItem('tasks', JSON.stringify(tasks));
-    localStorage.setItem('taskCount', JSON.stringify(taskCount));
-  }, [tasks, taskCount]);
-
-  const onSubmit = (data) => {    
-    const newTask = {
-      id: Date.now(),
-      title: data.title,
-      description: data.description,
-      dateAdded: new Date().toLocaleDateString()
-    };
-    setTasks([...tasks, newTask]);  
-    reset(); 
-  };
-
-  const ApagarTask = (id) => {  
-    const updatedTasks = tasks.filter(task => task.id !== id);
-    setTasks(updatedTasks);
-    setTaskCount(taskCount + 1);
-  };
-
+  const { register, handleSubmit, onSubmit, TaskCount, tasks, ApagarTask } = useTaskForm();
   return (
     <Container className={styles.Container}>
     
-      <section className={styles.section} >
-        <ul>
-          {tasks.map(task => (
-            <li key={task.id} className={styles.li}>
-              <img src={SVG} alt="svg" onClick={() => ApagarTask(task.id)} className={styles.ButtonDelete} />
-              <h3 className={styles.tituloTask}>{task.title}</h3>
-              <p>{task.description}</p>
-              <span>{task.dateAdded}</span>
-            </li>
-          ))}
-        </ul>
-      </section>
+        <ToDo tasks={tasks} ApagarTask={ApagarTask}/>
       
       <Container className={styles.items} >
         
         <aside className={styles.contador}>
           <h2>Finished tasks quantity</h2>
-           <h2>{taskCount}</h2>           
+           <h2>{TaskCount}</h2>           
         </aside>
         <article className={styles.newTask}>
           <h2 style={{textAlign: 'center'}}>Add new to do</h2>
