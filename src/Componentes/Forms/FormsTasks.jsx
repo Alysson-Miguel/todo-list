@@ -27,8 +27,8 @@ export default function FormsTasks() {
       description: data.description,
       dateAdded: new Date().toLocaleDateString()
     };
-    setTasks([...tasks, newTask]);  // Limpa os inputs pra colocar novas tasks
-    reset();
+    setTasks([...tasks, newTask]);  
+    reset(); 
   };
 
   const ApagarTask = (id) => {  
