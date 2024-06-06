@@ -5,7 +5,7 @@ const Header = () => {
       <>
       
       <h1><b>To</b>day</h1>
-      <p>Wake up, go ahead, do the thing not tomorroww, do <b>To</b>day</p>
+      <p>Wake up, go ahead, do the thing not tomorrow, do <b>To</b>day</p>
       <h3><b>To</b> do</h3>
       
       </>

@@ -7,31 +7,31 @@ import styles from './Forms.module.css'
 export default function FormsTasks() {
   const { register, handleSubmit, reset } = useForm();
   const [taskCount, setTaskCount] = useState(() => {
-    const storedTaskCount = JSON.parse(localStorage.getItem('taskCount')); // recuperando o valor armazenado na chave taskcount
+    const storedTaskCount = JSON.parse(localStorage.getItem('taskCount'));
     return storedTaskCount || 0;
   });
   const [tasks, setTasks] = useState(() => {
-    const storedTasks = JSON.parse(localStorage.getItem('tasks')); // recuperando o valor armazenado na chave stodedTask
+    const storedTasks = JSON.parse(localStorage.getItem('tasks')); 
     return storedTasks || [];
   });
-
-  useEffect(() => { // Armazena as duas chaves na LocalStorage (Captura uma ARRY e Retorna uma String Obj)
+  // Persiste do dados
+  useEffect(() => { 
     localStorage.setItem('tasks', JSON.stringify(tasks));
     localStorage.setItem('taskCount', JSON.stringify(taskCount));
   }, [tasks, taskCount]);
 
-  const onSubmit = (data) => {     // Adiciona data e hora da task
+  const onSubmit = (data) => {    
     const newTask = {
       id: Date.now(),
       title: data.title,
       description: data.description,
       dateAdded: new Date().toLocaleDateString()
     };
-    setTasks([...tasks, newTask]);  // Limpa os inputs pra colocar novas tasks
-    reset();
+    setTasks([...tasks, newTask]);  
+    reset(); 
   };
 
-  const ApagarTask = (id) => {   // Adiciona +1 nas tasks removidas/finalizadas
+  const ApagarTask = (id) => {  
     const updatedTasks = tasks.filter(task => task.id !== id);
     setTasks(updatedTasks);
     setTaskCount(taskCount + 1);
