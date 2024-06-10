@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import styles from './Footer.module.css'
 const Footer = () => {
     return ( 
@@ -10,7 +10,7 @@ const Footer = () => {
 
 <footer className={styles.Rodape}>@Alysson from ❤️ from by Your Alysson Miguel </footer>
 
-<Link to='/Tasks-Finalizadas' className={styles.link}>Tasks Finalizadas</Link>
+{/* <Link to='/Tasks-Finalizadas' className={styles.link}>Tasks Finalizadas</Link> */}
 
 
 </>
