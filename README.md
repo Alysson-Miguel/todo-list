@@ -1,6 +1,4 @@
 ## To-Do-List
-
-
 <blockquote>
   <h3>Tecnologias</h3>
   <ol>
@@ -10,3 +8,5 @@
     <li>JS</li>
   </ol>
 </blockquote>
+
+Um todo list com capacidade de armazenar dados
