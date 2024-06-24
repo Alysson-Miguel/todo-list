@@ -8,5 +8,3 @@
     <li>JS</li>
   </ol>
 </blockquote>
-
-Um todo list com capacidade de armazenar dados
