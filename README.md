@@ -9,7 +9,11 @@
   </ol>
 </blockquote>
 
-Pra executar a aplicação:
-Entre na pasta => cd todo-list
-instale as dependencias => npm install
-Execute o projeto => npm start
+<p>
+Pra executar a aplicação:<br/>
+  <ol>
+    <li>Entre na pasta => cd todo-list</li>
+    <li>instale as dependencias => npm install</li>
+    <li>Execute o projeto => npm start</li>
+    <ol/>
+</p>
