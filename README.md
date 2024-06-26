@@ -8,3 +8,8 @@
     <li>JS</li>
   </ol>
 </blockquote>
+
+Pra executar a aplicação:
+Entre na pasta => cd todo-list
+instale as dependencias => npm install
+Execute o projeto => npm start
